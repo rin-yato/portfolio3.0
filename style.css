@@ -14,13 +14,21 @@ body {
     justify-content: center;
 }
 
-.hero > h2 {
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10% 0% 2.5% 0%;
+}
+
+.hero-container > h2 {
     font-size: x-large;
     text-transform: capitalize;
     margin: 0;
 }
 
-.hero > h1 {
+.hero-container > h1 {
     font-size: 90px;
     text-transform: capitalize;
     margin: 0;
@@ -28,20 +36,42 @@ body {
     color: white;
 }
 
-.hero > h3 {
+.hero-container > h3 {
     font-size: large;
     text-transform: capitalize;
     font-weight: 400;
 }
 
-.hero > h3 > span {
+.hero-container > h3 > span {
     color: #00B4D8;
     text-decoration: underline;
 }
 
 .hero > img {
     width: 200px;
-    opacity: 0.8;
+    opacity: 1;
+    z-index: 1;
+    margin-top: 15px;
+}
+
+.cta {
+    font-size: x-large;
+    background-color: #00B4D8;
+    border: none;
+    border-radius: 1em;
+    padding: 10px 30px;
+    margin: 40px 0px 0px 0px;
+    font-weight: 600;
+    color: white;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.cta:hover {
+    color: #00B4D8;
+    background: #e0f4f8;
+    box-shadow: 0px 1px 2em 0.1em rgba(255, 255, 255, 0.628);
+    transform: translateY(-5%);
 }
 
 .second {
@@ -53,8 +83,6 @@ body {
 
 .second-container {
     width: 100vw;
-    height: 100%;
-    background: #098da9;
 }
 
 .wave {
@@ -67,6 +95,65 @@ body {
     position: absolute;
     bottom: 0px;
 }
+
+.glassmorphism {
+    width: 100vw;
+    height: 70vh;
+    background: linear-gradient(to bottom, #008da9, #1eb5d3, white);
+    display: flex;
+    justify-content: center;
+
+}
+
+.window {
+    width: 50vw;
+    height: calc(50vw * 0.6);
+    margin-top: 1%;
+    background: rgba(255, 255, 255, 0.125);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 0.725em;
+    box-shadow: 0px 0px 1em white;
+    background-image: url(asset/wallpaper1.jpg);
+    background-size: 110%;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.glassmorphism > .window > nav {
+    display: flex;
+    height: 20%;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.window > nav > img {
+    width: 50px;
+    height: fit-content;
+    margin-left: 10%;
+}
+
+.window > nav > ul {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: 7.5%;
+}
+
+.window > nav > ul > p {
+    color: white;
+    padding: 0.3em 0.7em;
+    font-weight: 500;
+}
+
+.window > nav > ul > p:nth-child(1) {
+    background: rgba(85, 59, 133, 0.425);
+    border-radius: 1em;
+    border: 1px solid rgba(255, 255, 255, 0.248);
+    backdrop-filter: blur(0.125em);
+}
+
 
 
 
