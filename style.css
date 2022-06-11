@@ -102,22 +102,34 @@ body {
     background: linear-gradient(to bottom, #008da9, #1eb5d3, white);
     display: flex;
     justify-content: center;
-
 }
 
 .window {
-    width: 50vw;
-    height: calc(50vw * 0.6);
-    margin-top: 1%;
-    background: rgba(255, 255, 255, 0.125);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 1200px;
+    height: 650px;
+    margin-top: 2%;
+    border: 2px solid rgba(255, 255, 255, 0.8);
     border-radius: 0.725em;
-    box-shadow: 0px 0px 1em white;
-    background-image: url(asset/wallpaper1.jpg);
+    box-shadow: 0px 0px 1em #025565b9, inset 0px 0px 1em 0.125em rgba(255, 255, 255, 0.386);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    background-color: black;
+}
+
+.window::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url(asset/wallpaper4.jpeg);
     background-size: 110%;
     background-position: center;
-    display: flex;
-    justify-content: space-between;
+    opacity: 0.825;
+    z-index: -1;
+    box-shadow: inset 0px 0px 0.5em 0.05em white;
 }
 
 .glassmorphism > .window > nav {
@@ -129,7 +141,7 @@ body {
 }
 
 .window > nav > img {
-    width: 50px;
+    width: 70px;
     height: fit-content;
     margin-left: 10%;
 }
@@ -143,15 +155,112 @@ body {
 
 .window > nav > ul > p {
     color: white;
-    padding: 0.3em 0.7em;
+    padding: 0.5em 1.5em;
     font-weight: 500;
 }
 
 .window > nav > ul > p:nth-child(1) {
-    background: rgba(85, 59, 133, 0.425);
+    background: rgba(141, 117, 187, 0.306);
+    border-radius: 1.5em;
+    border: 1px solid rgba(255, 255, 255, 0.448);
+    backdrop-filter: blur(0.115em);
+    box-shadow: inset 0px 0px 1em 0.01em rgba(255, 255, 255, 0.377);
+}
+
+.window-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.window-container > .text {
+    margin-left: 10%;
+}
+
+.window-container > .text > h1, .window-container > .text > h3 {
+    color: white;
+    text-transform: capitalize;
+}
+
+.window-container > .text > h1 {
+    font-size: 2.5rem;
+    font-weight: 550;
+    margin-bottom: 0;
+}
+
+.window-container > .text > h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.mockupbtn {
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.105);
+    border: 1px solid rgba(255, 255, 255, 0.168);
+    border-radius: 2rem;
+    padding: 0.5em 1em;
+    backdrop-filter: blur(0.045em);
+    margin-bottom: 35%;
+}
+
+.window-container > .glass {
+    width: 40%;
+    height: 80%;
+    background: rgba(255, 255, 255, 0.155);
+    margin-left: 7%;
+    margin-bottom: 5%;
     border-radius: 1em;
-    border: 1px solid rgba(255, 255, 255, 0.248);
-    backdrop-filter: blur(0.125em);
+    border: 1px solid rgba(255, 255, 255, 0.295);
+    backdrop-filter: blur(0.225em);
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.glass > .glass-right {
+    width: 100%;
+    height: 100%;
+    border-left: 1px solid rgba(255, 255, 255, 0.295);
+}
+
+.glass-left {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.glass-left > img {
+    width: 150px;
+}
+
+.glass-left > .product-info {
+    width: 90%;
+    height: 80%;
+    background: rgba(255, 255, 255, 0.255);
+    border-radius: 0.8em;
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, 0.295);
+}
+
+.glass-left > .product-info > h2 {
+    font-size: 1.2rem;
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+}
+
+.glass-left > .product-info > h3 {
+    font-size: 0.75rem;
+    color: white;
+    font-weight: 400;
+    text-align: left;
+    margin: 2.5% 10px;
 }
 
 
