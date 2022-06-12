@@ -5,6 +5,12 @@ body {
     overflow-x: hidden;
 }
 
+:root {
+    --bg: #E0E5EC;
+    --light: #FFFFFF;
+    --shadow: #A3B1C6;
+}
+
 .hero {
     width: 100vw;
     height: 100vh;
@@ -99,7 +105,7 @@ body {
 .glassmorphism {
     width: 100vw;
     height: 70vh;
-    background: linear-gradient(to bottom, #008da9, #1eb5d3, white);
+    background: linear-gradient(to bottom, #008da9, #1eb5d3, var(--bg));
     display: flex;
     justify-content: center;
 }
@@ -405,6 +411,118 @@ body {
     margin-top: 20px;
     overflow: hidden;
 }
+
+.third {
+    width: 100vw;
+    height: 100vh;
+    background: var(--bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.neomorphism {
+    width: 1200px;
+    height: 650px;
+    box-shadow: 15px 15px 15px 0 var(--shadow), -15px -15px 15px 0px var(--light);
+    background: var(--bg);
+    border-radius: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.neomorphism > .music-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.music-name > h1 {
+    margin-bottom: 0;
+    font-size: xx-large;
+    color: #00B4D8;
+}
+
+.music-name > h3 {
+    margin-top: 10px;
+    font-size: medium;
+}
+
+.neomorphism > .music-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.music-btn > div {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: var(--bg);
+    box-shadow: 6px 6px 10px 0px var(--shadow), -4px -4px 10px 0px var(--light);
+    margin: 70px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.music-btn > div:nth-child(1), .music-btn > div:nth-child(3) {
+    width: 125px;
+    height: 125px;
+}
+
+.neomorphism > .line {
+    width: 160px;
+    height: 5px;
+    background: var(--bg);
+    box-shadow: 3px 3px 5px 0 var(--shadow), -3px -3px 5px 0 var(--light);
+    margin-top: auto;
+    margin-bottom: 40px;
+}
+
+.music-btn > .previous > img {
+    width: 70px;
+}
+
+.music-btn > .play > img {
+    width: 120px;
+    transform: translateX(6%);
+}
+
+.music-btn > .next > img {
+    width: 70px;
+}
+
+.music-btn > div > img {
+    opacity: 0.2;
+}
+
+.neomorphism > .timeline {
+    width: 80%;
+    height: 10px;
+    background: var(--bg);
+    box-shadow: 5px 5px 8px 0 var(--shadow), -5px -5px 8px 0 var(--light);
+    border-radius: 1em;
+}
+
+.timeline > .current-time {
+    height: 100%;
+    width: 32%;
+    background: #00b4d887;
+    border-radius: 1em;
+}
+
+.time {
+    display: flex;
+    justify-content: space-between;
+}
+
+
 
 
 
