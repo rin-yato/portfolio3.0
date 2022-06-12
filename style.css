@@ -469,6 +469,7 @@ body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    transition: 0.8s ease;
 }
 
 .music-btn > div:nth-child(1), .music-btn > div:nth-child(3) {
@@ -483,6 +484,10 @@ body {
     box-shadow: 3px 3px 5px 0 var(--shadow), -3px -3px 5px 0 var(--light);
     margin-top: auto;
     margin-bottom: 40px;
+}
+
+.neomorphism > .music-btn > div:hover {
+    box-shadow: inset 6px 6px 10px 0px var(--shadow), inset -4px -4px 10px 0px var(--light);
 }
 
 .music-btn > .previous > img {
