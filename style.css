@@ -414,7 +414,7 @@ body {
 
 .third {
     width: 100vw;
-    height: 100vh;
+    /* height: 100vh; */
     background: var(--bg);
     display: flex;
     justify-content: center;
@@ -430,6 +430,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 15% 0;
 }
 
 .neomorphism > .music-name {
