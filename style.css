@@ -428,12 +428,11 @@ body {
     background: var(--bg);
     border-radius: 2em;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
     margin: 15% 0;
 }
 
-.neomorphism > .music-name {
+.neomorphism > .player > .music-name {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -452,7 +451,7 @@ body {
     font-size: medium;
 }
 
-.neomorphism > .music-btn {
+.neomorphism > .player > .music-btn {
     width: 100%;
     display: flex;
     align-items: center;
@@ -470,7 +469,6 @@ body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    transition: 0.8s ease;
 }
 
 .music-btn > div:nth-child(1), .music-btn > div:nth-child(3) {
@@ -478,7 +476,7 @@ body {
     height: 125px;
 }
 
-.neomorphism > .line {
+.neomorphism > .player > .line {
     width: 160px;
     height: 5px;
     background: var(--bg);
@@ -487,8 +485,12 @@ body {
     margin-bottom: 40px;
 }
 
-.neomorphism > .music-btn > div:hover {
+.neomorphism > .player > .music-btn > .clicked {
     box-shadow: inset 6px 6px 10px 0px var(--shadow), inset -4px -4px 10px 0px var(--light);
+}
+
+.clicked > #playpause {
+    transform: translateX(-0.7%);
 }
 
 .music-btn > .previous > img {
@@ -498,6 +500,7 @@ body {
 .music-btn > .play > img {
     width: 120px;
     transform: translateX(6%);
+    transition: all 0.2s ease;
 }
 
 .music-btn > .next > img {
@@ -508,7 +511,7 @@ body {
     opacity: 0.2;
 }
 
-.neomorphism > .timeline {
+.neomorphism > .player > .timeline {
     width: 80%;
     height: 10px;
     background: var(--bg);
@@ -518,14 +521,56 @@ body {
 
 .timeline > .current-time {
     height: 100%;
-    width: 32%;
+    width: 0;
     background: #00b4d887;
     border-radius: 1em;
+    animation: time 56s steps(56);
+    animation-play-state: paused;
+}
+
+@keyframes time {
+    100% {
+        width: 100%;
+    }
 }
 
 .time {
     display: flex;
     justify-content: space-between;
+}
+
+.player {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.songs {
+    border-radius: 1em;
+    align-self: center;
+    width: 30%;
+    height: 90%;
+    background: var(--bg);
+    box-shadow: inset 8px 8px 10px 0 var(--shadow), inset -8px -8px 15px 0 var(--light);
+    display: grid;
+    grid-template-rows: repeat(10, 10%);
+    justify-content: center;
+    align-items: center;
+}
+
+.songs > div {
+    border-top: 1px solid #A2A3A3;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.songs > div:nth-child(1) {
+    border-top: none;
+    color: #00B4D8;
+    font-weight: bolder;
 }
 
 
